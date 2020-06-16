@@ -1,13 +1,3 @@
-# Ilumin8
-An academic project built with an ESP32 board to help improve electricity efficiency
-
-The project basically works using an PIR sensor to detect movement, then sending the motion data over to the MQTT broker and turning the lamps (or leds, in this case) on.
-
-## Software
-
-The core code has been developed in C++ with the Arduino IDE
-
-```c++
 // Importa bibliotecas de WiFi e suporte ao MQTT
 # include <WiFi.h>
 # include <PubSubClient.h>
@@ -234,7 +224,3 @@ void loop() {
   delay(1000);
 
 }
-
-```
-
-## Hardware 
