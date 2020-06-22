@@ -5,7 +5,7 @@ O projeto funciona basicamente utilizando um sensor de presença para detectar o
 
 # Como reproduzir
 
-O código aqui armazenado e documentado foi testado apenas e unicamente com os dispositivos descritos na seção de [Hardware](# Hardware), qualquer mudança no modelo destes dispositivos pode ou não exigir alterações no código fonte. Além disso, as instruções aqui contidas ja levam em conta que você ja tem os pacotes do Arduino IDE necessários instalados para inserir código na placa em questão. Com adendos colocados, para reproduzir o projeto, siga os seguintes passos:
+O código aqui armazenado e documentado foi testado apenas e unicamente com os dispositivos descritos na seção de [Hardware](#Hardware), qualquer mudança no modelo destes dispositivos pode ou não exigir alterações no código fonte. Além disso, as instruções aqui contidas ja levam em conta que você ja tem os pacotes do Arduino IDE necessários instalados para inserir código na placa em questão. Com adendos colocados, para reproduzir o projeto, siga os seguintes passos:
 
 ### Montagem
 1 - Conecte o sensor de presença na placa de acordo com suas terminações especificas, com uma das conexões para o sinal.
