@@ -1,7 +1,27 @@
 # Ilumin8
-An academic project built with an ESP32 board to help improve electricity efficiency
+Um projeto academico construido com a placa ESP32-rev1 com o objetivo de ajudar na economia de energia através do controle dinâmico de lâmpadas.
 
-The project basically works using an PIR sensor to detect movement, then sending the motion data over to the MQTT broker and turning the lamps (or leds, in this case) on.
+O projeto funciona basicamente utilizando um sensor de presença para detectar o movimento, e então envia as informações para o Broker MQTT and liga o LED (Atuador utilizado neste projeto para motivos demonstrativos) representando a ligação das luzes do sistema.
+
+## Como reproduzir
+
+O código aqui armazenado e documentado foi testado apenas e unicamente com os dispositivos descritos na seção de [Hardware](##Hardware), qualquer mudança no modelo destes dispositivos pode ou não exigir alterações no código fonte. Além disso, as instruções aqui contidas ja levam em conta que você ja tem os pacotes do Arduino IDE necessários instalados para inserir código na placa em questão. Com adendos colocados, para reproduzir o projeto, siga os seguintes passos:
+
+### Montagem
+1 - Conecte o sensor de presença na placa de acordo com suas terminações especificas, com uma das conexões para o sinal.
+2 - Conecte o led na placa de acordo com suas terminações especificas, é recomendavel utilizar um resistor entre os dois para evitar uma possivel queima do mesmo.
+
+### Codificação
+1. Clone este repositorio
+2. Abra o arquivo "ilumin8.ino" contido na pasta "/src" com o Arduino IDE
+3. Subsititua as informações das variaveis SSID e PASSWORD, com as credenciais de acesso da rede Wireless a ser utilizada, respectivamente: Nome da rede e Senha.
+4. Substitua os valores numericos de LAMP_PIN e PIR_PIN com a identificação das portas escolhidas para conectar, respectivamente o LED e o Sensor de presença.
+6. Caso desejado, substitua os valores de BROKER_MQTT e BROKER_PORT com, respectivamente o endereço e porta do Broker MQTT desejado, caso contrário sinta-se livre para deixar os valores padrão, uma vez que estamos utilizando um servidor de teste Mosquitto gratuito.
+5. Baixe o código para a placa em questão
+
+### Broker MQTT
+1. Baixe o App MQTT Dashboard para Android (Recomendado, mas sinta-se livre para utilizar o aplicativo de sua preferência)
+2. Configure o dashboard com a porta e o endereço utilizado.
 
 ## Software
 
@@ -238,3 +258,20 @@ void loop() {
 ```
 
 ## Hardware 
+
+- Protoboard 400 pontos
+- Jumper Linha para Protoboard
+- Jumper Cabo Macho/Fêmea
+- Lâmpada LED
+  - Para poder representar as mudanças de estados da lâmpada de acordo comos resultados obtidos pelo sensor, utilizamos uma lâmpada LED
+- Placa ESP32 Rev 1
+  - A placa foi selecionada devido a sua alta velocidade de processamento eintegração nativa de módulos WI-FI e Bluetooth, facilitando assim a vconexão com os dispositivos utilizados no projeto, evitando a necessidade
+de uso de módulos externos.
+- Sensor de Movimento/Presença PIR - HC-SR50
+  - Este módulo consiste em um sensor piroelétrico que gera energia quando exposto ao calor. Os movimentos são detectados por ele por que o corpo humano emite calor em forma de radiação infravermelha.
+- Protocolo MTTQ
+  - Assim como os protocolos HTTP, FTP e outros, o protocolo MTTQ foi desenvolvido para permitir a transmissão de dados entre dispositivos conectados à internet através de métodos publish/subscribe.
+- Broker
+  - O Broker é um serviço de provedor que intermedia a transferência dos dados entre dispositivos. Utilizamos o Mosquito, que oferece uma plataforma grátis de teste.
+- Dashboard MQTT Dash
+  - Para podermos visualizar as informações detectadas pelo dispositivo utilizamos um aplicativo disponível para Android chamado MQTTDash. Com ele, é possível receber e enviar as informações junto ao protocolo MQTT.
