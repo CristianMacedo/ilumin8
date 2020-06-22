@@ -3,9 +3,9 @@ Um projeto academico construido com a placa ESP32-rev1 com o objetivo de ajudar 
 
 O projeto funciona basicamente utilizando um sensor de presença para detectar o movimento, e então envia as informações para o Broker MQTT and liga o LED (Atuador utilizado neste projeto para motivos demonstrativos) representando a ligação das luzes do sistema.
 
-## Como reproduzir
+# Como reproduzir
 
-O código aqui armazenado e documentado foi testado apenas e unicamente com os dispositivos descritos na seção de [Hardware](##Hardware), qualquer mudança no modelo destes dispositivos pode ou não exigir alterações no código fonte. Além disso, as instruções aqui contidas ja levam em conta que você ja tem os pacotes do Arduino IDE necessários instalados para inserir código na placa em questão. Com adendos colocados, para reproduzir o projeto, siga os seguintes passos:
+O código aqui armazenado e documentado foi testado apenas e unicamente com os dispositivos descritos na seção de [Hardware](# Hardware), qualquer mudança no modelo destes dispositivos pode ou não exigir alterações no código fonte. Além disso, as instruções aqui contidas ja levam em conta que você ja tem os pacotes do Arduino IDE necessários instalados para inserir código na placa em questão. Com adendos colocados, para reproduzir o projeto, siga os seguintes passos:
 
 ### Montagem
 1 - Conecte o sensor de presença na placa de acordo com suas terminações especificas, com uma das conexões para o sinal.
@@ -23,7 +23,7 @@ O código aqui armazenado e documentado foi testado apenas e unicamente com os d
 1. Baixe o App MQTT Dashboard para Android (Recomendado, mas sinta-se livre para utilizar o aplicativo de sua preferência)
 2. Configure o dashboard com a porta e o endereço utilizado.
 
-## Software
+# Software
 
 The core code has been developed in C++ with the Arduino IDE
 
@@ -257,7 +257,7 @@ void loop() {
 
 ```
 
-## Hardware 
+# Hardware 
 
 - Protoboard 400 pontos
 - Jumper Linha para Protoboard
