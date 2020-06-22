@@ -256,6 +256,8 @@ void loop() {
 }
 
 ```
+Com o fluxograma a seguir, é possível observar as condições geradas pelas mudanças de estado
+![Fluxograma: mudança de estados do dispositivo](https://github.com/CristianMacedo/ilumin8/blob/master/ilumin8-fluxograma.png)
 
 # Hardware 
 
